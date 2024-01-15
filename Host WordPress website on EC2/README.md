@@ -21,7 +21,7 @@ Please follow the below steps to create a virtual machine on AWS using EC2:
    
    <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/Launch_Instance.png" width="800">
   
-4.	Select Ubuntu as the operating system and keep Amazon Machine Image (AMI), Architecture and instance type as default. The default settings fall under free tier and they will not cost any money.
+4.	Select Ubuntu as the operating system and keep Amazon Machine Image (AMI), Architecture and Instance type as default. The default settings fall under free tier and they will not cost any money.
 
    <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/OS_Settings.png" width="800">
    
