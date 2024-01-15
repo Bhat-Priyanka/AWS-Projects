@@ -47,11 +47,15 @@ Please follow the below steps to create a virtual machine on AWS using EC2:
     1. Go to EC2 Dashboard and click on Elastic IP.
     2. Click on ‘Allocate Elastic IP address’ to create and allocate new elastic IP t the instance.
     3. Keep the default settings and click on ‘Allocate’.
+
        <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/Allocate_ElasticIP.png" width="800"> 
-    4. Once it is successfully created, click on ‘Actions’ under ‘Elastic IP addresses’ and select ‘Associate Elastic IP address’.
-    5. Under ‘Instance’, choose the newly created instance for WordPress and click on ‘Associate’.
+
+    5. Once it is successfully created, click on ‘Actions’ under ‘Elastic IP addresses’ and select ‘Associate Elastic IP address’.
+    6. Under ‘Instance’, choose the newly created instance for WordPress and click on ‘Associate’.
+
        <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/AssociateIP.png" width="800">
-    6. Go back to ‘Instances’ and verify that ‘Public IPv4 address’ and ‘Elastic IP‘  have been added to the instance.
+
+    8. Go back to ‘Instances’ and verify that ‘Public IPv4 address’ and ‘Elastic IP‘  have been added to the instance.
 
 #### 2. Install Apache Server:
 
@@ -68,6 +72,6 @@ Please follow the below steps to create Apache Server.
    4.	Click on ‘Advanced SSH settings’ tab and check ‘Use private key’. Add the previously downloaded WordPress_keypair.pem file. Click on ‘Ok’.
    5.	You will see that connection is successfully established to the instance on EC2.
 3.	To install Apache web server, enter the following command:
-   sudo apt install apache2
+   <br /> <code> sudo apt install apache2 </code>
 4.	To install PHP runtime and PHP MySQL connector, enter the following command:
-   sudo apt install php libapache2-mod-php php-mysql
+   <br /> <code> sudo apt install php libapache2-mod-php php-mysql </code>
