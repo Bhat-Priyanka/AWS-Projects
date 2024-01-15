@@ -85,7 +85,7 @@ Please follow the below steps to install MySQL database server:
 2. Log into MySQL server using the command:
    <br /> <code> sudo mysql -u root </code>
 3.	Change authentication to mysql-native-password by entering new user password:
-   <br /> <code> 	ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by 'Testpassword@123';  </code>
+   <br /> <code> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by 'Testpassword@123';  </code>
 4. Create new user by using this command:
    <br /> <code> CREATE USER 'wp_user'@localhost IDENTIFIED BY 'Testpassword@123';  </code>
 5.	Create a new database user for wordpress by using: 
