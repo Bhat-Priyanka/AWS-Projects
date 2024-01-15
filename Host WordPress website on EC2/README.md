@@ -37,7 +37,9 @@ This section explains how to host a WordPress website or blog using Amazon Web S
 7.	Keep the default settings for ‘Configure storage’.
 8.	Click on ‘Launch Instance’.
 9.	Once the instance is successfully created, it can be viewed under ‘Instances’ and the Instance state will be ‘Running’.
+    
    <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/Instance.png" width="800">
+   
 10. Assign Elastic IP to the new instance to make it constant:
     1. Go to EC2 Dashboard and click on Elastic IP.
     2. Click on ‘Allocate Elastic IP address’ to create and allocate new elastic IP t the instance.
