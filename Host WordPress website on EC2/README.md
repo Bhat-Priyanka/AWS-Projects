@@ -59,7 +59,7 @@ Please follow the below steps to create a virtual machine on AWS using EC2:
 
 #### 2. Install Apache Server:
 
-Please follow the below steps to create Apache Server.
+Please follow the below steps to install Apache Server:
 
 1.	If you are not working on Linux, use any of the SSH clients on Windows for example: MobaXterm, as this section needs to execute some commands. In the remote host settings under your SSH client, add public IP address of the instance.
 2.	As MobaXterm is used in this guide, follow the below steps for the setup:
@@ -75,3 +75,61 @@ Please follow the below steps to create Apache Server.
    <br /> <code> sudo apt install apache2 </code>
 4.	To install PHP runtime and PHP MySQL connector, enter the following command:
    <br /> <code> sudo apt install php libapache2-mod-php php-mysql </code>
+
+#### 3. Install MySQL database server:
+
+Please follow the below steps to install MySQL database server:
+
+1.	To install MySQL server, enter the following command:
+   <br /> <code> sudo apt install mysql-server </code>
+2. Log into MySQL server using the command:
+   <br /> <code> sudo mysql -u root </code>
+3.	Change authentication to mysql-native-password by entering new user password:
+   <br /> <code> 	ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by 'Testpassword@123';  </code>
+4. Create new user by using this command:
+   <br /> <code> CREATE USER 'wp_user'@localhost IDENTIFIED BY 'Testpassword@123';  </code>
+5.	Create a new database user for wordpress by using: 
+   <br /> <code> CREATE DATABASE wp;  </code>
+6. Grant all privileges on the database 'wp' to the newly created user by using this command:
+   <br /> <code> GRANT ALL PRIVILEGES ON wp.* TO 'wp_user'@localhost;  </code>
+
+#### 4. Install WordPress and host it:
+
+Please follow the below steps to install WordPress and host it on EC2:
+
+1.	Exit mysql by entering <code> /c </code> and exit and download WordPress using the command:
+   <br /> <code> cd /tmp  </code>
+   <br /> <code> Wget https://wordpress.org/latest.tar.gz  </code>
+2.	Unzip WordPress package:
+   <br /> <code> tar -xvf latest.tar.gz  </code>
+3.	Move WordPress folder to Apache document root by this command:
+   <br /> <code> sudo mv wordpress/ /var/www/html  </code>
+4.	Check if WordPress is working by entering the following on your browser:
+   <br /> <code> Your_Elastic_IP/wordpress  </code>
+5.	You will see WordPress installation page. Click on 'Let's go'.
+
+  	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/WordPress_Install.png" width="800">
+
+6. Configure WordPress by adding the necessary information.
+
+   <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/Wordpress_config.png" width="800"> 
+
+   1. If you get an error saying ‘unable to write to config file’, then enter the following command:
+   <br /> <code> cd /var/www/html/wordpress  </code>
+   2.	Create a file called wp-config.php using the command:
+   <br /> <code> nano wp-config.php </code>
+   3.	Paste the config rules to this file.
+   4.	Go back to WordPress installation page and click on ‘Run Installation’. And enter the necessary information and click on install.
+
+   <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/WordPressWelcome.png" width="800"> 
+
+7.	If you go back to <code> Your_Elastic_IP/wordpress </code> on the browser and refresh the page, you should see that your first WordPress website is successfully hosted.
+
+<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/LastPage.png" width="800"> 
+
+### Conclusion:
+
+By following the above steps, you will host your first WordPress website. As a next step, you can buy a custom domain name and link it to your website.
+
+
+
