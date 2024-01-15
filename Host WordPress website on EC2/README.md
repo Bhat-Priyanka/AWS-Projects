@@ -12,6 +12,7 @@ This section explains how to host a WordPress website or blog using Amazon Web S
 ### Explanation:
 
 #### 1.	Create a virtual machine on AWS EC2:
+
 1.	Log in to your AWS console and go to EC2 dashboard.
 2.	Click on ‘Launch an instance.’
 3.	Name the instance, for example: My First WordPress Server’.
@@ -44,14 +45,11 @@ This section explains how to host a WordPress website or blog using Amazon Web S
     1. Go to EC2 Dashboard and click on Elastic IP.
     2. Click on ‘Allocate Elastic IP address’ to create and allocate new elastic IP t the instance.
     3. Keep the default settings and click on ‘Allocate’.
-   
-<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/Allocate_ElasticIP.png" width="800">
-    4. Once it is successfully created, click on ‘Actions’ under ‘Elastic IP addresses’ and select ‘Associate Elastic IP address’.
-    5. Under ‘Instance’, choose the newly created instance for WordPress and click on ‘Associate’.
-
-<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/AssociateIP.png" width="800">
-       
-    6. Go back to ‘Instances’ and verify that ‘Public IPv4 address’ and ‘Elastic IP‘  have been added to the instance.
+    4. <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/Allocate_ElasticIP.png" width="800"> 
+    5. Once it is successfully created, click on ‘Actions’ under ‘Elastic IP addresses’ and select ‘Associate Elastic IP address’.
+    6. Under ‘Instance’, choose the newly created instance for WordPress and click on ‘Associate’.
+    7. <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/AssociateIP.png" width="800">
+    8. Go back to ‘Instances’ and verify that ‘Public IPv4 address’ and ‘Elastic IP‘  have been added to the instance.
 
 #### 2. Install Apache Server:
 
