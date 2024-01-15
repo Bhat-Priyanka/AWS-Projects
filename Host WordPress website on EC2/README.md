@@ -1,6 +1,6 @@
 ## How to host a WordPress website using AWS?
 
-This section explains how to host a WordPress website or blog using Amazon Web Service (AWS) using the AWS service 'Amazon Elastic Compute Cloud' (EC2).
+This guide explains how to host a WordPress website or blog using Amazon Web Service (AWS) using the AWS service 'Amazon Elastic Compute Cloud' (EC2).
 
 ## The main steps invoved are as below:
 
