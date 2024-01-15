@@ -26,13 +26,13 @@ Please follow the below steps to create a virtual machine on AWS using EC2:
    <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/OS_Settings.png" width="800">
    
 5.	Create new key-pair:
-   1. Under ‘Key pair (login)’, click on ‘Create new key pair’.
-   2.	Name the key pair, for example: ‘WordPress_keypair’ and keep the default settings for key pair type and private key file format.
+   i. Under ‘Key pair (login)’, click on ‘Create new key pair’.
+   ii. Name the key pair, for example: ‘WordPress_keypair’ and keep the default settings for key pair type and private key file format.
 
    <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/Create_KeyPair.png" width="750">
       
-   3.	Once clicked on ‘Create key pair’, WordPress_keypair.pem file is automatically downloaded. Keep the file in a secure location and do not share it with anyone. 
-   4.	After the previous step, the newly created key pair is automatically added to ‘Key pair name’ under ‘Key pair (login).’
+   iii. Once clicked on ‘Create key pair’, WordPress_keypair.pem file is automatically downloaded. Keep the file in a secure location and do not share it with anyone. 
+   iv. After the previous step, the newly created key pair is automatically added to ‘Key pair name’ under ‘Key pair (login).’
 6.	Under ‘Network settings’, check both ‘Allow HTTPS traffic from the internet’ and ‘Allow HTTP traffic from the internet’.
    
    <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/Network_Settings.png" width="800">
