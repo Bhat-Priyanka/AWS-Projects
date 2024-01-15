@@ -15,7 +15,7 @@ This section explains how to host a WordPress website or blog using Amazon Web S
 1.	Log in to your AWS console and go to EC2 dashboard.
 2.	Click on ‘Launch an instance.’
 3.	Name the instance, for example: My First WordPress Server’.
-<img src="[https://your-image-url.type](https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/Launch_Instance.png)" width="100" height="100">
+<img src="[https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/Launch_Instance.png]" width="100" height="100">
    ![alt text](https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/Launch_Instance.png =250x250)?raw=true)
 iv.	Select Ubuntu as the operating system and keep Amazon Machine Image (AMI), Architecture and instance type as default. The default settings fall under free tier and they will not cost any money. Add pic
 v.	Create new key-pair:
