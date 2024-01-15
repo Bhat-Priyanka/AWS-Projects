@@ -43,12 +43,12 @@ This section explains how to host a WordPress website or blog using Amazon Web S
     2. Click on ‘Allocate Elastic IP address’ to create and allocate new elastic IP t the instance.
     3. Keep the default settings and click on ‘Allocate’.
    
-       <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/Allocate_ElasticIP.png" width="800">
+    <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/Allocate_ElasticIP.png" width="800">
        
     4. Once it is successfully created, click on ‘Actions’ under ‘Elastic IP addresses’ and select ‘Associate Elastic IP address’.
     5. Under ‘Instance’, choose the newly created instance for WordPress and click on ‘Associate’.
 
-       <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/AssociateIP.png" width="800">
+    <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/AssociateIP.png" width="800">
        
     6. Go back to ‘Instances’ and verify that ‘Public IPv4 address’ and ‘Elastic IP‘  have been added to the instance.
 
@@ -60,7 +60,7 @@ This section explains how to host a WordPress website or blog using Amazon Web S
    2.	Enter the value of your ElasticIP for ‘Remote host’.
    3.	To enter the username, go to AWS Console -> Instances and click on ‘Connect’ and here we can see that the username is ‘ubuntu’.
 
-      <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/Username.png" width="800">
+   <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/Username.png" width="800">
       
    4.	Click on ‘Advanced SSH settings’ tab and check ‘Use private key’. Add the previously downloaded WordPress_keypair.pem file. Click on ‘Ok’.
    5.	You will see that connection is successfully established to the instance on EC2.
