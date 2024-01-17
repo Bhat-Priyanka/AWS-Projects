@@ -69,7 +69,7 @@ Please follow the below steps to install Apache Server:
       
    4.	Click on ‘Advanced SSH settings’ tab and check ‘Use private key’. Add the previously downloaded WordPress_keypair.pem file. Click on ‘Ok’.
 
-      <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/AddKeyPair.png" width="800">
+   <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/AddKeyPair.png" width="800">
       
    5.	You will see that connection is successfully established to the instance on EC2.
 3.	To install Apache web server, enter the following command:
