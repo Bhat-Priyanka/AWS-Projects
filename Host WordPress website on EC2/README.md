@@ -43,7 +43,7 @@ Please follow the below steps to create a virtual machine on AWS using EC2:
    
 10. Assign Elastic IP to the new instance to make it constant:
     1. Go to EC2 Dashboard and click on Elastic IP.
-    2. Click on ‘Allocate Elastic IP address’ to create and allocate new elastic IP t the instance.
+    2. Click on ‘Allocate Elastic IP address’ to create and allocate new elastic IP to the instance.
     3. Keep the default settings and click on ‘Allocate’.
 
        <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/Allocate_ElasticIP.png" width="800"> 
