@@ -17,7 +17,7 @@ Please follow the below steps to create a virtual machine on AWS using EC2:
 
 1.	Log in to your AWS console and go to EC2 dashboard.
 2.	Click on ‘Launch an instance.’
-3.	Name the instance, for example: My First WordPress Server’.
+3.	Name the instance, for example: 'My First WordPress Server’.
    
    <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/Launch_Instance.png" width="800">
   
