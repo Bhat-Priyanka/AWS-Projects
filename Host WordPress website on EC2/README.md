@@ -46,12 +46,12 @@ Please follow the below steps to create a virtual machine on AWS using EC2:
     2. Click on ‘Allocate Elastic IP address’ to create and allocate new elastic IP to the instance.
     3. Keep the default settings and click on ‘Allocate’.
 
-       <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/Allocate_ElasticIP.png" width="800"> 
+       src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/Allocate_ElasticIP.png" width="800"> 
 
     5. Once it is successfully created, click on ‘Actions’ under ‘Elastic IP addresses’ and select ‘Associate Elastic IP address’.
     6. Under ‘Instance’, choose the newly created instance for WordPress and click on ‘Associate’.
 
-       <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/AssociateIP.png" width="800">
+       src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/AssociateIP.png" width="800">
 
     8. Go back to ‘Instances’ and verify that ‘Public IPv4 address’ and ‘Elastic IP‘  have been added to the instance.
 
@@ -65,9 +65,12 @@ Please follow the below steps to install Apache Server:
    2.	Enter the value of your ElasticIP for ‘Remote host’.
    3.	To enter the username, go to AWS Console -> Instances and click on ‘Connect’ and here we can see that the username is ‘ubuntu’.
 
-   <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/Username.png" width="800">
+   src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/Username.png" width="800">
       
    4.	Click on ‘Advanced SSH settings’ tab and check ‘Use private key’. Add the previously downloaded WordPress_keypair.pem file. Click on ‘Ok’.
+
+      src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/AddKeyPair.png" width="800">
+      
    5.	You will see that connection is successfully established to the instance on EC2.
 3.	To install Apache web server, enter the following command:
    <br /> <code> sudo apt install apache2 </code>
@@ -106,11 +109,11 @@ Please follow the below steps to install WordPress and host it on EC2:
    <br /> <code> Your_Elastic_IP/wordpress  </code>
 5.	You will see WordPress installation page. Click on 'Let's go'.
 
-  	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/WordPress_Install.png" width="800">
+  	src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/WordPress_Install.png" width="800">
 
 6. Configure WordPress by adding the necessary information.
 
-   <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/Wordpress_config.png" width="800"> 
+   src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/Wordpress_config.png" width="800"> 
 
    1. If you get an error saying ‘unable to write to config file’, then enter the following command:
    <br /> <code> cd /var/www/html/wordpress  </code>
@@ -119,7 +122,7 @@ Please follow the below steps to install WordPress and host it on EC2:
    3.	Paste the config rules to this file.
    4.	Go back to WordPress installation page and click on ‘Run Installation’. And enter the necessary information and click on install.
 
-   <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/WordPressWelcome.png" width="800"> 
+   src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Host%20WordPress%20website%20on%20EC2/Images/WordPressWelcome.png" width="800"> 
 
 7.	If you go back to <code> Your_Elastic_IP/wordpress </code> on the browser and refresh the page, you should see that your first WordPress website is successfully hosted.
 
