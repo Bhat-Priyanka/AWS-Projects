@@ -59,4 +59,4 @@ The goal of this project is to get to know AWS QuickSight which is a cloud-nativ
    	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/Visualize%20data%20on%20AWS%20QuickSight/Images/Result.png" width="800">
 
 ### Conclusion:
-A large data set is visualized On AWS QuickSight using a S3 bucket. As a next step, we can create different visualizations based on price, title etc. 
+A large data set is visualized on AWS QuickSight using a S3 bucket. As a next step, we can create different visualizations based on price, title etc. 
