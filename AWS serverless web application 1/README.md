@@ -115,20 +115,20 @@ Create a stack on CloudFormation:
    *    <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/Stage.png" width="800">
       
 2.	Create integration:
-   *	Go to ‘Integrations’ (under ‘Develop’) -> ‘Manage Integration’ -> ‘Create’.
-   *	Add ‘Lambda function’ as ‘Integration type’, select the Lambda function.
-   *	Copy the integration ID after creating the integration.
+   	*	Go to ‘Integrations’ (under ‘Develop’) -> ‘Manage Integration’ -> ‘Create’.
+   	*	Add ‘Lambda function’ as ‘Integration type’, select the Lambda function.
+   	*	Copy the integration ID after creating the integration.
 3.	Create a route:
-   *	Go to Routes (under ‘Develop’) -> ‘Create’.
-   *	Create these 6 routes:
-        *	GET /items
-        *	PUT /items
-        *	GET /items/{id}
-        *	DELETE /items/{id}
-        *	OPTIONS /items
-        *	OPTIONS /items/{id}
+   	*	Go to Routes (under ‘Develop’) -> ‘Create’.
+   	*	Create these 6 routes:
+        	*	GET /items
+        	*	PUT /items
+        	*	GET /items/{id}
+        	*	DELETE /items/{id}
+        	*	OPTIONS /items
+        	*	OPTIONS /items/{id}
 
-      <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/Routes.png" width="800">
+      		<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/Routes.png" width="800">
       
 4.	Attach integration:
    	*	Click on each route and click on ‘Attach integration’ -> ‘Choose an existing integration and select it’. Repeat the same process for all 6 routes.
