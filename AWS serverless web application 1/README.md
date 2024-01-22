@@ -153,9 +153,9 @@ Create a stack on CloudFormation:
 2.	Go to downloads -> API Gateway folder -> Code -> client -> src -> config.ts and add apiId from the invoke URL.
 3.	For example, if <br /> <code> https://h9s9gchnv6.execute-api.eu-north-1.amazonaws.com/prod </code> is your invoke URL, then <br /> <code> h9s9gchnv6 </code> is the apiId.
 4.	Open terminal in the directory -> Code -> client and type the following command to install the necessary dependencies:
-	*	<br /> <code> npm install </code>
+	<br /> <code> npm install </code>
 5.	Create the build by typing:
-    	*	<br /> <code> npm run build </code>
+    	<br /> <code> npm run build </code>
 6.	Upload the build files to the S3 bucket by selecting everything under ‘Build’ directory and dragging and dropping them to the S3 bucket.
 7.	Click on ‘index.html’ file and copy the ‘Object URL’ and paste it into the browser. 
 8.	You can see that the website is hosted successfully and you can add items and verify that they have been added to DynamoDB successfully.
