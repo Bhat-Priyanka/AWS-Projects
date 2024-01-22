@@ -41,7 +41,7 @@ Create a stack on CloudFormation:
 
   	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/CreateStack.png" width="800">
    
-2.	As the template is available in downloaded files (from the link in the overview-> API Gateway, upload aws-backend-creation-cftemplate.yaml file by selecting ‘Upload a template file’ option under ‘Specify template’.
+2.	As the template is available in downloaded files (from the link in the overview) -> API Gateway, upload aws-backend-creation-cftemplate.yaml file by selecting ‘Upload a template file’ option under ‘Specify template’.
 
    <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/UploadTemplate.png" width="800">
 
