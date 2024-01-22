@@ -109,7 +109,7 @@ Create a stack on CloudFormation:
 #### 3. Configure API Gateway:
 
 1. Create stage:
-   *    Go to AWS Console -> API Gateway and click on ‘items-api’ -> ‘Stages’ (Found under Deploy on left side) -> ‘Create’.
+   *    Go to AWS Console -> API Gateway and click on ‘items-api’ -> ‘Stages’ (found under Deploy on left side) -> ‘Create’.
    *    Name the stage, for example, ‘prod’ and click on ‘Create’.
 
    *    <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/Stage.png" width="800">
