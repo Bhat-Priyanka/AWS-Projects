@@ -121,18 +121,18 @@ Create a stack on CloudFormation:
 3.	Create a route:
    	*	Go to Routes (under ‘Develop’) -> ‘Create’.
    	*	Create these 6 routes:
-        	1. GET /items
-        	2. PUT /items
-        	3. GET /items/{id}
-        	4. DELETE /items/{id}
-        	5. OPTIONS /items
-        	6. OPTIONS /items/{id}
-     		7. <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/Routes.png" width="800">
+        *	GET /items
+        *       PUT /items
+        *	GET /items/{id}
+        *	DELETE /items/{id}
+        *	OPTIONS /items
+        *	OPTIONS /items/{id}
+     	*	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/Routes.png" width="800">
       
 4.	Attach integration:
    	*	Click on each route and click on ‘Attach integration’ -> ‘Choose an existing integration and select it’. Repeat the same process for all 6 routes.
 
-        	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/AttachIntegration.png" width="800">
+        <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/AttachIntegration.png" width="800">
    
 5.	Configure CORS:
         *	Go to ‘CORS’ (under ‘Develop’) -> ‘Configure’.
