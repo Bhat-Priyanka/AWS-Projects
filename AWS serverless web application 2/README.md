@@ -38,7 +38,7 @@ Required resources are downloaded from the link: <a href="https://www.linkedin.c
 
 3.	Under ‘Block Public Access settings’, uncheck ‘Block all public access’ and keep all the default settings.
 
-    <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%202/Images/Unblock.png" width="800">
+    <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%202/Images/UnblockPublicAccess.png" width="800">
 
 4.	After clicking on ‘Create bucket’, you will see that the bucket is created.
 5.	Upload index.html and style.jss files from the link in the overview by clicking on the bucket -> ‘Upload’.
