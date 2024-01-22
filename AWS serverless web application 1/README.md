@@ -164,4 +164,4 @@ Create a stack on CloudFormation:
 
 ### Conclusion
 
-From this project, a serverless AWS application is hosted using the AWS services Amazon S3, AWS Lambda, Amazon DynamoDB, Amazon API Gateway, and AWS CloudFormation.
+With this project, a serverless AWS application is hosted using the AWS services Amazon S3, AWS Lambda, Amazon DynamoDB, Amazon API Gateway, and AWS CloudFormation.
