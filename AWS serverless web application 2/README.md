@@ -2,7 +2,7 @@
 
 ### Overview
 
-AWS provides special services for running code, managing data, and integrating applications without managing any servers. Serverless services offer features like automatic scaling, high availability, and pay-for-use billing model. The goal of this project is to create a serverless web application on AWS where a user can add items to the dashboard with prices and view them.
+AWS provides special services for running code, managing data, and integrating applications without managing any servers. Serverless services offer features like automatic scaling, high availability, and pay-for-use billing model. The goal of this project is to create a serverless web application on AWS where a user view the items from the DynamoDB table as a static website.
 Required resources are downloaded from the link: <a href="https://www.linkedin.com/learning/building-serverless-applications-in-aws/building-a-serverless-application-in-aws?autoplay=true&resume=false&u=92408722" target="_blank">Link</a> -> Exercise files.
 
 ### AWS services involved with the project:
