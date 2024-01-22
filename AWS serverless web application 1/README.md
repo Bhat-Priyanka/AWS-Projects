@@ -9,7 +9,7 @@ Required resources are downloaded from the link: <a href="https://www.youtube.co
 
 ### AWS services involved with the project:
 1.	Amazon S3: 
-    *	Amazon Simple Store Service (S3) is an object storage service that offers scalability, data availability, security and performance and flexible retrieval of data.
+    *	Amazon Simple Store Service (S3) is an object storage service that offers scalability, data availability, security, performance, and flexible retrieval of data.
 2.	AWS Lambda:
     *	Lambda is a serverless computing service that runs a code in response to events and automatically manages the resources in the fastest way.
 3.	Amazon DynamoDB:
