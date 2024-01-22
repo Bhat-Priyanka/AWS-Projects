@@ -104,18 +104,18 @@ Create a stack on CloudFormation:
 
    <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/CORS.png" width="800">              
 
-#### Configure API Gateway:
+#### 3. Configure API Gateway:
 
 1. Create stage:
-   1.	Go to AWS Console -> API Gateway and click on ‘items-api’ -> ‘Stages’ (Found under Deploy on left side) -> ‘Create’.
-   2.	Name the stage, for example, ‘prod’ and click on ‘Create’.
+   *    Go to AWS Console -> API Gateway and click on ‘items-api’ -> ‘Stages’ (Found under Deploy on left side) -> ‘Create’.
+   *    Name the stage, for example, ‘prod’ and click on ‘Create’.
 
-      <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/Stage.png" width="800">
+   *    <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/Stage.png" width="800">
       
 2.	Create integration:
-   1.	Go to ‘Integrations’ (under ‘Develop’) -> ‘Manage Integration’ -> ‘Create’.
-   2.	Add ‘Lambda function’ as ‘Integration type’, select the Lambda function.
-   3.	Copy the integration ID after creating the integration.
+   *	Go to ‘Integrations’ (under ‘Develop’) -> ‘Manage Integration’ -> ‘Create’.
+   *	Add ‘Lambda function’ as ‘Integration type’, select the Lambda function.
+   *	Copy the integration ID after creating the integration.
 3.	Create a route:
    a.	Go to Routes (under ‘Develop’) -> ‘Create’.
    b.	Create these 6 routes:
