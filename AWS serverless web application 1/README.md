@@ -10,13 +10,11 @@ Required resources are downloaded from the link: https://www.youtube.com/redirec
     *	Amazon Simple Store Service (S3) is an object storage service that offers scalability, data availability, security and performance and flexible retrieval of data.
 2.	AWS Lambda:
     *	Lambda is a serverless computing service that runs a code in response to events and automatically manages the resources in the fastest way.
-3.	Amazon SQS:
-    *	Amazon Simple Queue Service (SQS) is a fully managed message queuing service which is based on the first-in-first-out principle.
-4.	Amazon DynamoDB:
+3.	Amazon DynamoDB:
     *	DynamoDB is a serverless NOSQL database service and high performance.
-5.	Amazon API Gateway:
+4.	Amazon API Gateway:
     *	API Gateway is a fully managed service to create, publish and maintain APIs at any scale.
-6.	AWS CloudFormation:
+5.	AWS CloudFormation:
     *	CloudFormation is a tool to model, provision and manage code.
   
 ### Architecture diagram:
@@ -85,7 +83,8 @@ Create a stack on CloudFormation:
                         }
                      ]
                   } </code>
-    <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/BucketPolicy.png" width="800">
+                  
+   <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/BucketPolicy.png" width="800">
 
 9.	Go back to the bucket -> Permissions -> Cross-origin resource sharing (CORS) -> Edit and add the following:
    <br /> <code> [
@@ -107,31 +106,61 @@ Create a stack on CloudFormation:
 
 #### Configure API Gateway:
 
-1.	Go to AWS Console -> API Gateway and click on ‘items-api’ -> ‘Stages’ (Found under Deploy on left side) -> ‘Create’.
-a.	Create stage:
-i.	Name the stage, for example, ‘prod’ and click on ‘Create’.
+1. Create stage:
+   1.	Go to AWS Console -> API Gateway and click on ‘items-api’ -> ‘Stages’ (Found under Deploy on left side) -> ‘Create’.
+   2.	Name the stage, for example, ‘prod’ and click on ‘Create’.
+
+      <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/Stage.png" width="800">
+      
 2.	Create integration:
-a.	Go to ‘Integrations’ (under ‘Develop’) -> ‘Manage Integration’ -> ‘Create’.
-b.	Add ‘Lambda function’ as ‘Integration type’, select the Lambda function. Add pic
-3.	Copy the integration ID after creating the integration.
-4.	Create a route:
-a.	Go to Routes (under ‘Develop’) -> ‘Create’.
-b.	Create these 6 routes:
-i.	GET /items
-ii.	PUT /items
-iii.	GET /items/{id}
-iv.	DELETE /items/{id}
-v.	OPTIONS /items
-vi.	OPTIONS /items/{id}
-5.	Attach integration:
-a.	Click on each route and click on ‘Attach integration’ -> ‘Choose an existing integration and select it’. Repeat the same process for all 6 routes. Add pic
-6.	Configure CORS:
-a.	Go to ‘CORS’ (under ‘Develop’) -> ‘Configure’.
-b.	Add the following bucket URL under ‘Access-Control-Allow-Origin’.
-i.	https://serverlessexpenseapp.s3.amazonaws.com
-c.	Choose ‘*’ under ‘Access-Control-Max-Methods’.
-d.	Add ‘*’ under ‘Access-Control-Expose-Headers’.
-e.	Add 96400 under ‘Access-Control-Max-Age’.
-f.	Choose ‘YES’ for ‘Access-Control-Allow-Credentials’
-g.	Click on ‘Deploy’ -> Select the newly created stage, ‘prod’ and click on ‘Deploy on stage’.
-7.	Get the API Invoke URL: Go to ‘APIs’ (under API Gateway) -> click on the api -> copy of the Invoke URL of the stage name ‘prod’.
+   1.	Go to ‘Integrations’ (under ‘Develop’) -> ‘Manage Integration’ -> ‘Create’.
+   2.	Add ‘Lambda function’ as ‘Integration type’, select the Lambda function.
+   3.	Copy the integration ID after creating the integration.
+3.	Create a route:
+   a.	Go to Routes (under ‘Develop’) -> ‘Create’.
+   b.	Create these 6 routes:
+      i.	GET /items
+      ii.	PUT /items
+      iii.	GET /items/{id}
+      iv.	DELETE /items/{id}
+      v.	OPTIONS /items
+      vi.	OPTIONS /items/{id}
+
+      <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/Routes.png" width="800">
+      
+4.	Attach integration:
+   a.	Click on each route and click on ‘Attach integration’ -> ‘Choose an existing integration and select it’. Repeat the same process for all 6 routes.
+
+   <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/AttachIntegration.png" width="800">
+   
+5.	Configure CORS:
+   a.	Go to ‘CORS’ (under ‘Develop’) -> ‘Configure’.
+   b.	Add the following bucket URL under ‘Access-Control-Allow-Origin’.
+      *	https://serverlessexpenseapp.s3.amazonaws.com
+   c.	Choose ‘*’ under ‘Access-Control-Max-Methods’.
+   d.	Add ‘*’ under ‘Access-Control-Expose-Headers’.
+   e.	Add 96400 under ‘Access-Control-Max-Age’.
+   f.	Choose ‘YES’ for ‘Access-Control-Allow-Credentials’
+
+   <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/CORSConfig.png" width="800">
+   
+   g.	Click on ‘Deploy’ -> Select the newly created stage, ‘prod’ and click on ‘Deploy on stage’.
+6.	Get the API Invoke URL: Go to ‘APIs’ (under API Gateway) -> click on the api -> copy of the Invoke URL of the stage name ‘prod’.
+
+#### 4. Client-side coding:
+1.	Install Node.js -> https://nodejs.org/en/download
+2.	Go to downloads -> API Gateway folder -> Code -> client -> src -> config.ts and add apiId from the invoke URL.
+3.	For example, if <br /> <code> https://h9s9gchnv6.execute-api.eu-north-1.amazonaws.com/prod </code> is your invoke URL, then <br /> <code> h9s9gchnv6 </code> is the apiId.
+4.	 Open terminal in the directory -> Code -> client and type the following command to install the necessary dependencies:
+	 <br /> <code> npm install </code>
+5.	Create the build by typing:
+    <br /> <code> npm run build </code>
+6.	Upload the build files to the S3 bucket by selecting everything under ‘Build’ directory and dragging and dropping them to the S3 bucket.
+7.	Click on ‘index.html’ file and copy the ‘Object URL’ and paste it into the browser. 
+8.	You can see that the website is hosted successfully and you can add items and verify that they have been added to DynamoDB successfully.
+
+   <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/Result.png" width="800">
+
+### Conclusion
+
+From this project, a serverless AWS application is hosted using the AWS services Amazon S3, AWS Lambda, Amazon DynamoDB, Amazon API Gateway, and AWS CloudFormation.
