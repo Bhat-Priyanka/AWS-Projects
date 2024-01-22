@@ -133,6 +133,8 @@ Create a stack on CloudFormation:
    	*	Click on each route and click on ‘Attach integration’ -> ‘Choose an existing integration and select it’. Repeat the same process for all 6 routes.
 
         <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/AttachIntegration.png" width="800">
+
+ 	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/Integration.png" width="800">	
    
 5.	Configure CORS:
         *	Go to ‘CORS’ (under ‘Develop’) -> ‘Configure’.
