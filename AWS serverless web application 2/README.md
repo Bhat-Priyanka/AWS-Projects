@@ -63,8 +63,10 @@ Required resources are downloaded from the link: <a href="https://www.linkedin.c
     
 4.	Once the table is created, click on the table -> Actions -> Explore table items -> Create item -> Json view.
 5.	From the downloads -> Recipes.rtf, enter the item one by one.
-6.	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%202/Images/CreateItems.png" width="800">
-7. <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%202/Images/Items.png" width="800">
+
+  	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%202/Images/CreateItem.png" width="800">
+   
+   <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%202/Images/Items.png" width="800">
 
 #### 4. Create Lambda function
 
