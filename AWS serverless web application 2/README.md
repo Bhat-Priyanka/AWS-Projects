@@ -108,7 +108,7 @@ Required resources are downloaded from the link: <a href="https://www.linkedin.c
 9.	Copy the ‘Invoke URL’ from Stages -> Stage details and go to downloads -> app.js file.
 10.	In the ‘fetch()’, line, replace the URL with the invoke URL.
 11.	Upload this file to the S3 bucket.
-12.	Under S3 bucket -> Properties -> Static website hosting, open the URL the URL on the browser and see that the website is hosted and the recipes are displayed.
+12.	Under S3 bucket -> Properties -> Static website hosting, open the URL on the browser and see that the website is hosted and the recipes are displayed.
 
     <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%202/Images/Result.png" width="800">
 
