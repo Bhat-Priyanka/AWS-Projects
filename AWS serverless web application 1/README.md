@@ -122,7 +122,7 @@ Create a stack on CloudFormation:
    	*	Go to Routes (under ‘Develop’) -> ‘Create’.
    	*	Create these 6 routes:
         *	GET /items
-        *       PUT /items
+        *	PUT /items
         *	GET /items/{id}
         *	DELETE /items/{id}
         *	OPTIONS /items
