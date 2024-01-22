@@ -117,49 +117,49 @@ Create a stack on CloudFormation:
    *	Add ‘Lambda function’ as ‘Integration type’, select the Lambda function.
    *	Copy the integration ID after creating the integration.
 3.	Create a route:
-   a.	Go to Routes (under ‘Develop’) -> ‘Create’.
-   b.	Create these 6 routes:
-      i.	GET /items
-      ii.	PUT /items
-      iii.	GET /items/{id}
-      iv.	DELETE /items/{id}
-      v.	OPTIONS /items
-      vi.	OPTIONS /items/{id}
+   *	Go to Routes (under ‘Develop’) -> ‘Create’.
+   *	Create these 6 routes:
+        *	GET /items
+        *	PUT /items
+        *	GET /items/{id}
+        *	DELETE /items/{id}
+        *	OPTIONS /items
+        *	OPTIONS /items/{id}
 
       <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/Routes.png" width="800">
       
 4.	Attach integration:
-   a.	Click on each route and click on ‘Attach integration’ -> ‘Choose an existing integration and select it’. Repeat the same process for all 6 routes.
+   	*	Click on each route and click on ‘Attach integration’ -> ‘Choose an existing integration and select it’. Repeat the same process for all 6 routes.
 
-   <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/AttachIntegration.png" width="800">
+        	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/AttachIntegration.png" width="800">
    
 5.	Configure CORS:
-   a.	Go to ‘CORS’ (under ‘Develop’) -> ‘Configure’.
-   b.	Add the following bucket URL under ‘Access-Control-Allow-Origin’.
-      *	https://serverlessexpenseapp.s3.amazonaws.com
-   c.	Choose ‘*’ under ‘Access-Control-Max-Methods’.
-   d.	Add ‘*’ under ‘Access-Control-Expose-Headers’.
-   e.	Add 96400 under ‘Access-Control-Max-Age’.
-   f.	Choose ‘YES’ for ‘Access-Control-Allow-Credentials’
+        *	Go to ‘CORS’ (under ‘Develop’) -> ‘Configure’.
+   	*	Add the following bucket URL under ‘Access-Control-Allow-Origin’.
+      		*	https://serverlessexpenseapp.s3.amazonaws.com
+  	*	Choose ‘*’ under ‘Access-Control-Max-Methods’.
+     	*	Add ‘*’ under ‘Access-Control-Expose-Headers’.
+   	*	Add 96400 under ‘Access-Control-Max-Age’.
+   	*	Choose ‘YES’ for ‘Access-Control-Allow-Credentials’
 
-   <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/CORSConfig.png" width="800">
+   		<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/CORSConfig.png" width="800">
    
-   g.	Click on ‘Deploy’ -> Select the newly created stage, ‘prod’ and click on ‘Deploy on stage’.
+   	*	Click on ‘Deploy’ -> Select the newly created stage, ‘prod’ and click on ‘Deploy on stage’.
 6.	Get the API Invoke URL: Go to ‘APIs’ (under API Gateway) -> click on the api -> copy of the Invoke URL of the stage name ‘prod’.
 
 #### 4. Client-side coding:
 1.	Install Node.js -> https://nodejs.org/en/download
 2.	Go to downloads -> API Gateway folder -> Code -> client -> src -> config.ts and add apiId from the invoke URL.
 3.	For example, if <br /> <code> https://h9s9gchnv6.execute-api.eu-north-1.amazonaws.com/prod </code> is your invoke URL, then <br /> <code> h9s9gchnv6 </code> is the apiId.
-4.	 Open terminal in the directory -> Code -> client and type the following command to install the necessary dependencies:
-	 <br /> <code> npm install </code>
+4.	Open terminal in the directory -> Code -> client and type the following command to install the necessary dependencies:
+	*	<br /> <code> npm install </code>
 5.	Create the build by typing:
-    <br /> <code> npm run build </code>
+    	*	<br /> <code> npm run build </code>
 6.	Upload the build files to the S3 bucket by selecting everything under ‘Build’ directory and dragging and dropping them to the S3 bucket.
 7.	Click on ‘index.html’ file and copy the ‘Object URL’ and paste it into the browser. 
 8.	You can see that the website is hosted successfully and you can add items and verify that they have been added to DynamoDB successfully.
 
-   <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/Result.png" width="800">
+   	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/Result.png" width="800">
 
 ### Conclusion
 
