@@ -114,3 +114,4 @@ Required resources are downloaded from the link: <a href="https://www.linkedin.c
 
 ### Conclusion
 
+With this project, a serverless AWS application is hosted using the AWS services Amazon S3, AWS Lambda, Amazon DynamoDB, and Amazon API Gateway.
