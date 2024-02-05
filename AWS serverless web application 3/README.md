@@ -101,28 +101,28 @@ The goal of this project is to create a web application that enables users to re
    3.	Install Amplify CLI by running the command:
       <br /> <code>	npm install -g @aws-amplify/cli </code>
    4.	Clone the CodeCommit repository to Cloud9:
-      1.	Copy the URL of the CodeCommit repository and clone it in Cloud9.
-      2.	Make sure the repository is present in Cloud9 by entering ls command.
-      3.	Navigate to wildrydes-site2 by entering:
-      4. <br /> <code> cd wildrydes-site2 </code>
-      5.	Initialize Amplify CLI by executing the command:
-      6. <br /> <code>	Amplify init </code>
-      7.	Make sure to add ‘prod’ as name for environment.
-     	8. <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/amplify.png" width="800">
-      9.	Verify Amplify is installed by entering the command:
-      10. <br /> <code> Amplify version </code>
+         1.	Copy the URL of the CodeCommit repository and clone it in Cloud9.
+         2.	Make sure the repository is present in Cloud9 by entering ls command.
+         3.	Navigate to wildrydes-site2 by entering:
+         4. <br /> <code> cd wildrydes-site2 </code>
+         5.	Initialize Amplify CLI by executing the command:
+         6. <br /> <code>	Amplify init </code>
+         7.	Make sure to add ‘prod’ as name for environment.
+     	   8. <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/amplify.png" width="800">
+         9.	Verify Amplify is installed by entering the command:
+         10. <br /> <code> Amplify version </code>
    5.	 To add Cognito user pool, enter the following command:
-      <br /> <code>	Amplify add auth </code>
-      <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/addAuth.png" width="800">
+         1. <br /> <code>	Amplify add auth </code>
+         2. <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/addAuth.png" width="800">
    6.	Commit code changes and start a new build in Amplify by entering the commands:
-      1.	git add .:
-      2.	git commit -m “Configure Cognito”
-      3.	git push
+         1.	<br /> <code> git add . </code>
+         2.	<br /> <code> git commit -m “Configure Cognito” </code>
+         3.	<br /> <code> git push </code>
    7.	Once the build is done, go to AWS console -> AWS Cognito -> check that user pool is created and an app client is created.
-      1.	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/UserPool.png" width="800">
+         1.	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/UserPool.png" width="800">
    9.	Testing user registration and authentication:
-      1.	Go the browser and refresh the web page and click on ‘Giddy up!’. 
-      2.	Create a new user account and confirm that you get a verification code on the email.
+         1.	Go the browser and refresh the web page and click on ‘Giddy up!’. 
+         2.	Create a new user account and confirm that you get a verification code on the email.
 
       
 
