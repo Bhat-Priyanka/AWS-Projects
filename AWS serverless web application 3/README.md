@@ -81,19 +81,19 @@ The goal of this project is to create a web application that enables users to re
 
 #### 2.	Static website hosting:
    1.	Go to AWS Console -> AWS Amplify -> ‘Get Started’ -> ‘Host your web app’.
-   2. <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/HostWebApp.png" width="800">
+      <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/HostWebApp.png" width="800">
    3.	Select ‘AWS CodeCommit’. Select the repository ‘wildrydes-site2’ and keep the default settings.
    4.	In ‘Build Settings’ -> ‘Environment’ -> select ‘Create new environment’ and name is as ‘prod’ and click on ‘Create new role’.
-   5. <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/BuildSettings.png" width="800">
+      <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/BuildSettings.png" width="800">
    6.	Unser ‘Select trusted entity’, make sure that AWS Service is selected and under ‘Use case’, select AWS Amplify’ and click ‘Next’, keep the default settings and click on ‘Next’.
    7.	In Review page, name the role ‘ and click on ‘Create role’.
    8.	In Roles tab, search for ‘wildrydes-backend-role and click on it.
    9.	Click on ‘Add permission’ -> ‘Attach policies’ -> search for ‘AwsCodeCommitReadOnly’ and select it and click ‘Add permissions’.
-   10. <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/AttachPolicy.png" width="800">
+       <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/AttachPolicy.png" width="800">
    11. Go back to ‘Review’ page, click on ‘Save and deploy’.
    12. Wait for a few mins to finish building and deploying and you can click on the URL generated to launch the web page.
-   13. <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/BuildDone.png" width="800">
-   14. <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/LaunchPage.png" width="800">
+       <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/BuildDone.png" width="800">
+       <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/LaunchPage.png" width="800">
 
 #### 3. User registration and authentication using AWS Cognito:
    1.	Go to AWS Console -> Cloud9 -> ‘Create environment’.
@@ -104,22 +104,22 @@ The goal of this project is to create a web application that enables users to re
          1.	Copy the URL of the CodeCommit repository and clone it in Cloud9.
          2.	Make sure the repository is present in Cloud9 by entering ls command.
          3.	Navigate to wildrydes-site2 by entering:
-         4. <br /> <code> cd wildrydes-site2 </code>
+            <br /> <code> cd wildrydes-site2 </code>
          5.	Initialize Amplify CLI by executing the command:
-         6. <br /> <code>	Amplify init </code>
+            <br /> <code>	Amplify init </code>
          7.	Make sure to add ‘prod’ as name for environment.
-     	   8. <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/amplify.png" width="800">
+     	      <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/amplify.png" width="800">
          9.	Verify Amplify is installed by entering the command:
-         10. <br /> <code> Amplify version </code>
+             br /> <code> Amplify version </code>
    5.	 To add Cognito user pool, enter the following command:
-         1. <br /> <code>	Amplify add auth </code>
-         2. <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/addAuth.png" width="800">
+         <br /> <code>	Amplify add auth </code>
+         <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/addAuth.png" width="800">
    6.	Commit code changes and start a new build in Amplify by entering the commands:
-         1.	<br /> <code> git add . </code>
-         2.	<br /> <code> git commit -m “Configure Cognito” </code>
-         3.	<br /> <code> git push </code>
+        <br /> <code> git add . </code>
+        <br /> <code> git commit -m “Configure Cognito” </code>
+        <br /> <code> git push </code>
    7.	Once the build is done, go to AWS console -> AWS Cognito -> check that user pool is created and an app client is created.
-         1.	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/UserPool.png" width="800">
+        <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/UserPool.png" width="800">
    9.	Testing user registration and authentication:
          1.	Go the browser and refresh the web page and click on ‘Giddy up!’. 
          2.	Create a new user account and confirm that you get a verification code on the email.
