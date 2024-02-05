@@ -167,8 +167,7 @@ The goal of this project is to create a web application that enables users to re
                           }
                       },
                       "body": "{\"PickupLocation\":{\"Latitude\":47.6174755835663,\"Longitude\":-122.28837066650185}}"
-                     }<code>
-
+                     } </code>
       2.	Make sure ‘Execution result’ is succeeded.
 
 
