@@ -25,7 +25,7 @@ The goal of this project is to create a web application that enables users to re
   
 ### Architecture diagram:
 
-<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%202/Images/Arch2.png" width="800">
+<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/Arch3.png" width="800">
 
 ### The main steps involved are as below:
 
@@ -43,4 +43,39 @@ The goal of this project is to create a web application that enables users to re
 
 ### Steps to follow:
 
+1. Copy the code from git repository provided by AWS to the CodeCommit repository:
+   1.	Create a repository AWS Console -> AWS CodeCommit -> Create repository -> name it as ‘Wildrydes-site2’.
+   2.	Add policy to IAM user to access CodeCommit.
+      a.	Go to AWS console -> IAM -> users -> your user account.
+      b.	Click on ‘Add permission’ -> ‘Attach policies directly’.
+      c.	Search for ‘AWSCodeCommitPowerUser’ and select it and click on ‘Next’ -> ‘Add permission’.
+     	d. <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/AddPermission.png" width="800">
+   4.	Create Git credentials for IAM user to allow HTTP requests to CodeCommit:
+      a.	Go to your IAM user account -> ‘Security Credentials’ -> ‘HTTP Git Credentials for AWS Code Commit’ -> ‘Generate credentials’. Copy the details or download them.
+     	b. <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/GitCredentials.png" width="800">
+   6.	Clone the repository:
+      a.	Go back to CodeCommit -> Wildrydes-site2 -> ‘Clone URL’ -> ‘Clone HTTP’.
+      b.	Go to AWS CLI and enter the following command:
+         <br /> <code> git clone https://github.com/aws-samples/aws-serverless-webapp-workshop.git </code>
+         i.	Enter user name and password you generated in ‘Create Git credentials’ step.
+         ii.Change directory to new repo by enter the following command:
+         <br /> <code> cd wildrydes-site2 </code>
+   7.	Copy the project code from GitHub and commit it to the new repository by enter the command:
+      <br /> <code> git clone https://github.com/aws-samples/aws-serverless-webapp-workshop.git <code>
+      <br /> <code> cd aws-serverless-webapp-workshop <code>
+   8.	Split out WildRydesVue code into its own branch:
+      <br /> <code> sudo yum install git-subtree -y <code>
+      <br /> <code> git subtree split -P resources/code/WildRydesVue -b WildRydesVue <code>
+   9.	Create new directory for CodeCommit repository:
+      <br /> <code> mkdir ../wildrydes-site2 && cd ../wildrydes-site2 <code>
+   10.	Initialize new directory:
+       <br /> <code> git init <code>
+   11.	Pull the WildRydesVue branch into your new repo
+       <br /> <code> git pull ../aws-serverless-webapp-workshop WildRydesVue <code>
+   12. Add your CodeCommit repository as a remote
+       <br /> <code> git remote add origin codecommit://wildrydes-site2 <code>
+   13. Push the code to your new CodeCommit repository
+       <br /> <code> git push -u origin master <code>
+   14. Remove the temporary local repository: 
+       <br /> <code> rm -rf ../aws-serverless-webapp-workshop <code>
 
