@@ -104,13 +104,13 @@ The goal of this project is to create a web application that enables users to re
       1.	Copy the URL of the CodeCommit repository and clone it in Cloud9.
       2.	Make sure the repository is present in Cloud9 by entering ls command.
       3.	Navigate to wildrydes-site2 by entering:
-         <br /> <code> cd wildrydes-site2 </code>
-      4.	Initialize Amplify CLI by executing the command:
-         <br /> <code>	Amplify init </code>
-      5.	Make sure to add ‘prod’ as name for environment.
-     	6. <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/amplify.png" width="800">
-      7.	Verify Amplify is installed by entering the command:
-         <br /> <code> Amplify version </code>
+      4. <br /> <code> cd wildrydes-site2 </code>
+      5.	Initialize Amplify CLI by executing the command:
+      6. <br /> <code>	Amplify init </code>
+      7.	Make sure to add ‘prod’ as name for environment.
+     	8. <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/amplify.png" width="800">
+      9.	Verify Amplify is installed by entering the command:
+      10. <br /> <code> Amplify version </code>
    5.	 To add Cognito user pool, enter the following command:
       <br /> <code>	Amplify add auth </code>
       <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/addAuth.png" width="800">
