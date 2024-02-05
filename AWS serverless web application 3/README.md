@@ -120,9 +120,57 @@ The goal of this project is to create a web application that enables users to re
         <br /> <code> git push </code>
    7.	Once the build is done, go to AWS console -> AWS Cognito -> check that user pool is created and an app client is created.
         <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/UserPool.png" width="800">
-   9.	Testing user registration and authentication:
+   8.	Testing user registration and authentication:
          1.	Go the browser and refresh the web page and click on ‘Giddy up!’. 
          2.	Create a new user account and confirm that you get a verification code on the email.
+     
+#### 4. Serverless backend with AWS Lambda and Amazon DynamoDB:
+   1.	Create a new table:
+      1.	Go To DynamoDB and click on ‘Create table’.
+      2.	Name it as ‘Rides’ and enter ‘RideId’ for ‘Partition key’ and create the table.
+         <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/Table.png" width="800">
+   2.	Create an IAM role for Lambda function:
+      1.	Go to IAM Console -> Roles -> ‘Create role’. Select ‘Lambda’ as use case.
+         <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/LambdaRole.png" width="800">
+      2.	Click next and select AWSLambdaBasicExecutionRole and check the box and click ‘Next’.
+      3.	Name the role as ‘WildRydesLambda’ and create the role.
+      4.	To access DynamoDB, go to the new role and Permission -> ‘Add Permission’  -> ‘Create inline policy’ and choose DynamoDB as service.
+      5.	In ‘Select Actions’, choose ‘PutItem’ and check the checkbox.
+      6.	In ‘Resource’, select ‘Add ARN link’.
+      7.	Go to the DynamoDB table table in new tab -> Overview -> General Information’ -> ‘Additional info’ and copy the ARN link.
+      8.	Paste the link in ‘Resource ARN’ field and click on ‘Add ARN’.
+      <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/ARN.png" width="800">
+      9. In ‘Review’ page, enter ‘DynamoDBWriteAccess’ as policy name and choose ‘Create policy’.
+   3.	Create Lambda function to use IAM role:
+      1.	Go to AWS Lambda Console -> ‘Create function’ and name it as ‘RequestUnicorn’. 
+      2.	Select Nodejs.18x for the Runtime.
+      3.	Expand ‘Change default execution role’ -> ‘Use an existing role’ and select ‘WildRydesLambda’ role and create function.
+     	   <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/LambdaFuc.png" width="800">
+      4.	In ‘Function code’ section, copy and paste the code from https://webapp.serverlessworkshops.io/3-serverlessbackend/4-lambda/requestUnicorn.js and click on ‘Deploy’.
+   4.	Test the lambda function:
+      1.	Go to Test tab, enter ‘TestRequirementEvent’ in event name field and enter the following code and save and click ‘Test’.
+     	<br /> <code>{
+                      "path": "/ride",
+                      "httpMethod": "POST",
+                      "headers": {
+                           "Accept": "*/*",
+                           "Authorization": "eyJraWQiOiJLTzRVMWZs",
+                           "content-type": "application/json; charset=UTF-8"
+                        },
+                      "queryStringParameters": null,
+                      "pathParameters": null,
+                      "requestContext": {
+                        "authorizer": {
+                           "claims": {
+                            "cognito:username": "the_username"
+                           }
+                          }
+                      },
+                      "body": "{\"PickupLocation\":{\"Latitude\":47.6174755835663,\"Longitude\":-122.28837066650185}}"
+                     }<code>
+
+      2.	Make sure ‘Execution result’ is succeeded.
+
 
       
 
