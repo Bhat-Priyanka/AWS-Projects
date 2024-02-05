@@ -46,13 +46,13 @@ The goal of this project is to create a web application that enables users to re
 #### 1. Copy the code from git repository provided by AWS to the CodeCommit repository:
    1.	Create a repository AWS Console -> AWS CodeCommit -> Create repository -> name it as ‘Wildrydes-site2’.
    2.	Add policy to IAM user to access CodeCommit.
-         a.	Go to AWS console -> IAM -> users -> your user account.
-         b.	Click on ‘Add permission’ -> ‘Attach policies directly’.
-         c.	Search for ‘AWSCodeCommitPowerUser’ and select it and click on ‘Next’ -> ‘Add permission’.
-     	   d. <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/AddPermission.png" width="800">
+         *	Go to AWS console -> IAM -> users -> your user account.
+         *	Click on ‘Add permission’ -> ‘Attach policies directly’.
+         *	Search for ‘AWSCodeCommitPowerUser’ and select it and click on ‘Next’ -> ‘Add permission’.
+         *	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/AddPermission.png" width="800">
    4.	Create Git credentials for IAM user to allow HTTP requests to CodeCommit:
-         a.	Go to your IAM user account -> ‘Security Credentials’ -> ‘HTTP Git Credentials for AWS Code Commit’ -> ‘Generate credentials’. Copy the details or download them.
-     	   b. <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/GitCredentials.png" width="800">
+         *	Go to your IAM user account -> ‘Security Credentials’ -> ‘HTTP Git Credentials for AWS Code Commit’ -> ‘Generate credentials’. Copy the details or download them.
+     	   * <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/GitCredentials.png" width="800">
    6.	Clone the repository:
          a.	Go back to CodeCommit -> Wildrydes-site2 -> ‘Clone URL’ -> ‘Clone HTTP’.
          b.	Go to AWS CLI and enter the following command:
