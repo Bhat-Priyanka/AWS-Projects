@@ -79,3 +79,22 @@ The goal of this project is to create a web application that enables users to re
    14. Remove the temporary local repository: 
          <br /> <code> rm -rf ../aws-serverless-webapp-workshop </code>
 
+#### 2.	Static website hosting:
+   1.	Go to AWS Console -> AWS Amplify -> ‘Get Started’ -> ‘Host your web app’.
+   2. <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/HostWebApp.png" width="800">
+   3.	Select ‘AWS CodeCommit’. Select the repository ‘wildrydes-site2’ and keep the default settings.
+   4.	In ‘Build Settings’ -> ‘Environment’ -> select ‘Create new environment’ and name is as ‘prod’ and click on ‘Create new role’.
+   5. <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/BuildSettings.png" width="800">
+   6.	Unser ‘Select trusted entity’, make sure that AWS Service is selected and under ‘Use case’, select AWS Amplify’ and click ‘Next’, keep the default settings and click on ‘Next’.
+   7.	In Review page, name the role ‘ and click on ‘Create role’.
+   8.	In Roles tab, search for ‘wildrydes-backend-role and click on it.
+   9.	Click on ‘Add permission’ -> ‘Attach policies’ -> search for ‘AwsCodeCommitReadOnly’ and select it and click ‘Add permissions’.
+   10. <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/AttachPolicy.png" width="800">
+   11. Go back to ‘Review’ page, click on ‘Save and deploy’.
+   12. Wait for a few mins to finish building and deploying and you can click on the URL generated to launch the web page.
+   13. <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/BuildDone.png" width="800">
+   14. <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/LaunchPage.png" width="800">
+
+   
+
+
