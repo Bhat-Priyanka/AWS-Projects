@@ -7,16 +7,16 @@ The goal of this project is to create a web application that enables users to re
 ### AWS services used in this project are:
 
 1. AWS Amplify:
-   * AWS server to build full-stack web and mobile apps on AWS.
+    * AWS server to build full-stack web and mobile apps on AWS.
 2. Amazon Cognito:
-   * User identity and access management service.
+    * User identity and access management service.
 3. Cloud9:
-   * Cloud based integrated developmenet environment.
-4. AWS Lambda:
-   * Lambda is a serverless computing service that runs a code in response to events and automatically manages the resources in the fastest way.
-5.	Amazon DynamoDB:
-   * DynamoDB is a serverless NOSQL database service and high performance.
+    * Cloud based integrated developmenet environment.
+5. AWS Lambda:
+    * Lambda is a serverless computing service that runs a code in response to events and automatically manages the resources in the fastest way.
+6.	Amazon DynamoDB:
+    * DynamoDB is a serverless NOSQL database service and high performance.
 6.	Amazon API Gateway:
-   * API Gateway is a fully managed service to create, publish and maintain APIs at any scale.
+    * API Gateway is a fully managed service to create, publish and maintain APIs at any scale.
 7. AWS CodeCommit:
-   * Serverless source control service that hosts Git repositories.
+    * Serverless source control service that hosts Git repositories.
