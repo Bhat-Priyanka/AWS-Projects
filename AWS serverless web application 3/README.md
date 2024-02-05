@@ -1,4 +1,6 @@
-## Overview
+## How to host a serverless web application on AWS?
+
+### Overview
 
 AWS provides special services for running code, managing data, and integrating applications without managing any servers. Serverless services offer features like automatic scaling, high availability, and pay-for-use billing model.
 
@@ -20,3 +22,17 @@ The goal of this project is to create a web application that enables users to re
     * API Gateway is a fully managed service to create, publish and maintain APIs at any scale.
 7. AWS CodeCommit:
     * Serverless source control service that hosts Git repositories.
+  
+### Architecture diagram:
+
+<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%202/Images/Arch2.png" width="800">
+
+### The main steps involved are as below:
+
+1. Copy the code from S3 bucket provided by AWS to the CodeCommit repository
+2. Static website hosting:
+3. User registration and authentication using AWS Cognito:
+4. Serverless backend with AWS Lambda and Amazon DynamoDB:
+5. Create API Gateway to expose Lambda function:
+6. Testing the application:
+
