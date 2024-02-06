@@ -200,7 +200,28 @@ The goal of this project is to create a web application that enables users to re
                       },
                       "body": "{\"PickupLocation\":{\"Latitude\":47.6174755835663,\"Longitude\":-122.28837066650185}}"
                      } </code>
-         2.	Make sure ‘Execution result’ is succeeded.
+         2.	Make sure the status of ‘Execution result’ is succeeded.
+     
+   5.	Create API Gateway to expose Lambda function:
+         i.	Create a new REST API:
+               1.	Go to API Gateway Console -> ‘Create API’ -> ‘REST API’ -> ‘Build’.
+               2.	Name the API as ‘WildRydes’ and click ‘Create API’.
+         ii.	Create Cognito User Pools Authorizer:
+               1.	For newly created API, go to ‘Authorizer’ -> ‘Create new authorizer’ -> name it as ‘WildRydes’.
+               2.	Select ‘Cognito’ as ‘Authorizer type’ and select ‘wildRydes’ as ‘Cognoto user pool’. Enter ‘Authorization’ as ‘Token source’ and                         create authorizer.
+               3.	To test authorizer, go to the browser -> web page -> if you are logged in, you will go to /ride page and copy the token Auth Token and paste it in the ‘Test Authorizer’. Make sure you get 200 as error code and check if the details are correct.
+         iii.	Create a new roesurce and method:
+               1.	Go to the API -> ‘Resources’ -> ‘Create Resource’ -> name it as ‘ride’ and select CORS. Add pic
+               2.	Click on ‘Create method’ -> Select ‘POST’ as ‘Method type’, select ‘Lambda function’ as integration type and select ‘RequestUnicorn’ function in ‘Lambda function’ field and create method. Add pic
+         iv.	Go to ‘Method Request’ tab -> Edit -> Add ‘wildRydes’ as authorization method and click on save.
+         v.	Click on ‘Deploy API’ -> ‘Stage’ -> ‘New Stage’ -> name it as ‘prod’ and click on ‘Deploy’.
+         vi.	Copy the invoke URL from ‘Stage details’
+     	   vii.	Go to Cloud9 -> repository -> src -> config.js -> add invoke URL and save the file.
+         viii.	Run the following commands to commit the changes:
+               a.	git add src/config.js   
+               b.	git commit -m "Configure API invokeURL"
+               c.	git push
+
 
 
       
