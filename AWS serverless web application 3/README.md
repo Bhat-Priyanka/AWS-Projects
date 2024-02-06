@@ -31,13 +31,17 @@ The goal of this project is to create a web application that enables users to re
 
 1. Copy the code from git repository provided by AWS to the CodeCommit repository 
    * In this step, a new repository is created in AWS CodeCommit by cloning the repository from GitHub. This will have all the necessary code for the project.
+
 2. Static website hosting
    * In this step, AWS Amplify Console will be configured to host the static resources for your web application and served via Amazon CloudFront. The end users will then access the site using the public website URL exposed by AWS Amplify Console.
+
 3. User registration and authentication using AWS Cognito
    * In this step, AWS Amplify CLI will be used to create an Amazon Cognito User Pool to manage your users accounts. We pages that enable customers to register as a new user, verify their email address, and sign into the site will be deployed.
+
 4. Serverless backend with AWS Lambda and Amazon DynamoDB
    * In this step, AWS Lambda and Amazon DynamoDB will be used to build a backend process for handling requests from your web application. The browser application that you deployed in the first module allows users to request that a unicorn be sent to a location of their choice. In order to fulfill those requests, the JavaScript running in the browser invokes a service running in the cloud. Lambda function that will be invoked each time a user requests a unicorn. The function selects a unicorn from the fleet, records the request in a DynamoDB table, and responds to the front-end application with details about the dispatched unicorn.
    An IAM role will be created that grants Lambda function permission to write logs to Amazon CloudWatch Logs and access to write items to the DynamoDB table.
+
 5. Create API Gateway to expose Lambda function
    * In this step, API Gateway will be used to expose the Lambda function as a RESTful API. This API will be accessible on the public Internet. It will be secured using the Amazon Cognito user pool.
 
@@ -129,6 +133,7 @@ The goal of this project is to create a web application that enables users to re
          1.	Go To DynamoDB and click on ‘Create table’.
          2.	Name it as ‘Rides’ and enter ‘RideId’ for ‘Partition key’ and create the table.
             <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/Table.png" width="800">
+   
    2.	Create an IAM role for Lambda function:
          1.	Go to IAM Console -> Roles -> ‘Create role’. Select ‘Lambda’ as use case.
             <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/LambdaRole.png" width="800">
@@ -141,12 +146,14 @@ The goal of this project is to create a web application that enables users to re
          8.	Paste the link in ‘Resource ARN’ field and click on ‘Add ARN’.
             <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/ARN.png" width="800">
          9. In ‘Review’ page, enter ‘DynamoDBWriteAccess’ as policy name and choose ‘Create policy’.
+   
    3.	Create Lambda function to use IAM role:
          1.	Go to AWS Lambda Console -> ‘Create function’ and name it as ‘RequestUnicorn’. 
          2.	Select Nodejs.18x for the Runtime.
          3.	Expand ‘Change default execution role’ -> ‘Use an existing role’ and select ‘WildRydesLambda’ role and create function.
      	      <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/LambdaFuc.png" width="800">
          4.	In ‘Function code’ section, copy and paste the code from https://webapp.serverlessworkshops.io/3-serverlessbackend/4-lambda/requestUnicorn.js and click on ‘Deploy’.
+   
    4.	Test the lambda function:
          1.	Go to Test tab, enter ‘TestRequirementEvent’ in event name field and enter the following code and save and click ‘Test’.
      	   <br /> <code>{
