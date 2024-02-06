@@ -212,15 +212,20 @@ The goal of this project is to create a web application that enables users to re
                3.	To test authorizer, go to the browser -> web page -> if you are logged in, you will go to /ride page and copy the token Auth Token and paste it in the ‘Test Authorizer’. Make sure you get 200 as error code and check if the details are correct.
          3.	Create a new roesurce and method:
                1.	Go to the API -> ‘Resources’ -> ‘Create Resource’ -> name it as ‘ride’ and select CORS. Add pic
-               2.	Click on ‘Create method’ -> Select ‘POST’ as ‘Method type’, select ‘Lambda function’ as integration type and select ‘RequestUnicorn’ function in ‘Lambda function’ field and create method. Add pic
+     
+               <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/Resource.png" width="800">
+               2.	Click on ‘Create method’ -> Select ‘POST’ as ‘Method type’, select ‘Lambda function’ as integration type and select ‘RequestUnicorn’ function in ‘Lambda function’ field and create method.
+
+         <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/Method.png" width="800">
+         
          4.	Go to ‘Method Request’ tab -> Edit -> Add ‘wildRydes’ as authorization method and click on save.
-         v.	Click on ‘Deploy API’ -> ‘Stage’ -> ‘New Stage’ -> name it as ‘prod’ and click on ‘Deploy’.
-         vi.	Copy the invoke URL from ‘Stage details’
-     	   vii.	Go to Cloud9 -> repository -> src -> config.js -> add invoke URL and save the file.
-         viii.	Run the following commands to commit the changes:
-               a.	git add src/config.js   
-               b.	git commit -m "Configure API invokeURL"
-               c.	git push
+         5.	Click on ‘Deploy API’ -> ‘Stage’ -> ‘New Stage’ -> name it as ‘prod’ and click on ‘Deploy’.
+         6.	Copy the invoke URL from ‘Stage details’
+     	   7.	Go to Cloud9 -> repository -> src -> config.js -> add invoke URL and save the file.
+         8.	Run the following commands to commit the changes:
+               <br /> <code>git add src/config.js   
+               git commit -m "Configure API invokeURL"
+               git push </code>
 
 
 
