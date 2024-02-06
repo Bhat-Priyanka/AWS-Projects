@@ -210,10 +210,11 @@ The goal of this project is to create a web application that enables users to re
                1.	For newly created API, go to ‘Authorizer’ -> ‘Create new authorizer’ -> name it as ‘WildRydes’.
                2.	Select ‘Cognito’ as ‘Authorizer type’ and select ‘wildRydes’ as ‘Cognoto user pool’. Enter ‘Authorization’ as ‘Token source’ and                         create authorizer.
                3.	To test authorizer, go to the browser -> web page -> if you are logged in, you will go to /ride page and copy the token Auth Token and paste it in the ‘Test Authorizer’. Make sure you get 200 as error code and check if the details are correct.
-         3.	Create a new roesurce and method:
-               1.	Go to the API -> ‘Resources’ -> ‘Create Resource’ -> name it as ‘ride’ and select CORS. Add pic
+         3.	Create a new resource and method:
+               1.	Go to the API -> ‘Resources’ -> ‘Create Resource’ -> name it as ‘ride’ and select CORS.
      
-               <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/Resource.png" width="800">
+            <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/Resource.png" width="800">
+               
                2.	Click on ‘Create method’ -> Select ‘POST’ as ‘Method type’, select ‘Lambda function’ as integration type and select ‘RequestUnicorn’ function in ‘Lambda function’ field and create method.
 
          <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/Method.png" width="800">
