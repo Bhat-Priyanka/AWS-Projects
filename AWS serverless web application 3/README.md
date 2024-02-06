@@ -228,6 +228,14 @@ The goal of this project is to create a web application that enables users to re
                git commit -m "Configure API invokeURL"
                git push </code>
 
+#### Testing the application:
+         i.	Go to the web page, click anywhere on the map, and click on ‘Request unicorn’.
+         ii.	You will see a unicorn is on its way.  You can verify that new items have been added to the DynamoDB table.
+
+         <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/Result.png" width="800">
+
+### Conclusion:
+
 
 
       
