@@ -224,15 +224,15 @@ The goal of this project is to create a web application that enables users to re
          6.	Copy the invoke URL from ‘Stage details’
      	   7.	Go to Cloud9 -> repository -> src -> config.js -> add invoke URL and save the file.
          8.	Run the following commands to commit the changes:
-               <br /> <code>git add src/config.js   
+               <br /> <code> git add src/config.js   
                git commit -m "Configure API invokeURL"
                git push </code>
 
 #### Testing the application:
-         i.	Go to the web page, click anywhere on the map, and click on ‘Request unicorn’.
-         ii.	You will see a unicorn is on its way.  You can verify that new items have been added to the DynamoDB table.
+      i.	Go to the web page, click anywhere on the map, and click on ‘Request unicorn’.
+      ii.	You will see a unicorn is on its way.  You can verify that new items have been added to the DynamoDB table.
 
-         <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/Result.png" width="800">
+      <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/Result.png" width="800">
 
 ### Conclusion:
 
