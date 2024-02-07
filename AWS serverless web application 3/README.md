@@ -21,7 +21,7 @@ Required resources are downloaded from the link: <a href="https://www.youtube.co
   
 ### Architecture diagram:
 
-<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/AWSArch.png" width="800">
+<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/AWSArch.png" width="800">
 
 ### The main steps involved are as below:
 
@@ -39,26 +39,26 @@ In this section we will create Lambda function, API and DynamoDB table within a 
 Create a stack on CloudFormation:
 1.	Go to AWS console -> CloudFormation and create a stack.
 
-  	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/CreateStack.png" width="800">
+  	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/CreateStack.png" width="800">
    
 2.	As the template is available in downloaded files (from the link in the overview) -> API Gateway, upload aws-backend-creation-cftemplate.yaml file by selecting ‘Upload a template file’ option under ‘Specify template’.
 
-   <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/UploadTemplate.png" width="800">
+   <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/UploadTemplate.png" width="800">
 
 3.	After uploading, if you click on ‘View on designer’, you can visualize what is going to be created.
 
-  	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/Designer.png" width="800">
+  	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/Designer.png" width="800">
    
 4.	Click on ‘Create stack’ button to go back and create the stack. (Marked in the previous screenshot.)
 5.	Click on ‘Next’ and add a name for the stack for example, 'ExpenseApp'.
 
-   <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/StackName.png" width="800">
+   <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/StackName.png" width="800">
    
 6.	Keep default settings in the ‘Configuration’ page and click on ‘Next’.
 7.	In the ‘Review ExpenseApp’ page, click on ‘I acknowledge’ checkbox and click on ‘Submit’. 
 8.	All events are created as shown in the screenshot.
 
-   <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/Events.png" width="800">
+   <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/Events.png" width="800">
 
 #### 2. Create a S3 bucket:
 
@@ -68,7 +68,7 @@ Create a stack on CloudFormation:
 4.	Go to the newly created bucket and go to Properties -> ‘Static website hosting’ and click on ‘Edit’.
 5.	Enable static website hosting and add the name of the index document.
 
-   <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/EditHosting.png" width="800">
+   <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/EditHosting.png" width="800">
    
 6.	Go back to the bucket -> Permissions -> ‘Block public access’ -> Edit.
 7.	Unblock all public access by clicking on the checkbox.
@@ -86,7 +86,7 @@ Create a stack on CloudFormation:
                      ]
                   } </code>
                   
-   <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/BucketPolicy.png" width="800">
+   <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/BucketPolicy.png" width="800">
 
 9.	Go back to the bucket -> Permissions -> Cross-origin resource sharing (CORS) -> Edit and add the following:
    <br /> <code> [
@@ -104,7 +104,7 @@ Create a stack on CloudFormation:
                      }
                   ] </code>
 
-   <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/CORS.png" width="800">              
+   <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/CORS.png" width="800">              
 
 #### 3. Configure API Gateway:
 
@@ -112,7 +112,7 @@ Create a stack on CloudFormation:
    *    Go to AWS Console -> API Gateway and click on ‘items-api’ -> ‘Stages’ (found under Deploy on left side) -> ‘Create’.
    *    Name the stage, for example, ‘prod’ and click on ‘Create’.
 
-   *    <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/Stage.png" width="800">
+   *    <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/Stage.png" width="800">
       
 2.	Create integration:
    	*	Go to ‘Integrations’ (under ‘Develop’) -> ‘Manage Integration’ -> ‘Create’.
@@ -127,14 +127,14 @@ Create a stack on CloudFormation:
         *	DELETE /items/{id}
         *	OPTIONS /items
         *	OPTIONS /items/{id}
-     	*	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/Routes.png" width="800">
+     	*	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/Routes.png" width="800">
       
 4.	Attach integration:
    	*	Click on each route and click on ‘Attach integration’ -> ‘Choose an existing integration and select it’. Repeat the same process for all 6 routes.
 
-        <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/AttachIntegration.png" width="800">
+        <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/AttachIntegration.png" width="800">
 
- 	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/Integration.png" width="800">	
+ 	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/Integration.png" width="800">	
    
 5.	Configure CORS:
         *	Go to ‘CORS’ (under ‘Develop’) -> ‘Configure’.
@@ -145,7 +145,7 @@ Create a stack on CloudFormation:
    	*	Add 96400 under ‘Access-Control-Max-Age’.
    	*	Choose ‘YES’ for ‘Access-Control-Allow-Credentials’
 
-   		<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/CORSConfig.png" width="800">
+   		<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/CORSConfig.png" width="800">
    
    	*	Click on ‘Deploy’ -> Select the newly created stage, ‘prod’ and click on ‘Deploy on stage’.
 6.	Get the API Invoke URL: Go to ‘APIs’ (under API Gateway) -> click on the api -> copy of the Invoke URL of the stage name ‘prod’.
@@ -162,7 +162,7 @@ Create a stack on CloudFormation:
 7.	Click on ‘index.html’ file and copy the ‘Object URL’ and paste it into the browser. 
 8.	You can see that the website is hosted successfully and you can add items and verify that they have been added to DynamoDB successfully.
 
-   	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/Result.png" width="800">
+   	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/Result.png" width="800">
 
 ### Conclusion
 
