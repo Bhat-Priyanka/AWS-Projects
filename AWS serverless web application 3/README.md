@@ -235,7 +235,7 @@ Go to the web page, click anywhere on the map, and click on â€˜Request unicornâ€
 
 ### Conclusion:
 
-
+With this project, a serverless AWS application is hosted using the AWS services Amazon Cognito, AWS Lambda, Amazon DynamoDB, and Amazon API Gateway, and AWS CodeCommit.
 
       
 
