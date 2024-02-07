@@ -1,0 +1,148 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: |
+  This cloud formation template creates an HTTP API with an AWS Lambda function integration.
+Resources:
+  ExpenseDynamoDBTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      AttributeDefinitions:
+        - AttributeName: 'expenseId'
+          AttributeType: 'S'
+      KeySchema:
+        - AttributeName: 'expenseId'
+          KeyType: 'HASH'
+      ProvisionedThroughput:
+        ReadCapacityUnits: 1
+        WriteCapacityUnits: 1
+      TableName: all-expenses
+  ExpenseAPI:
+    Type: AWS::ApiGatewayV2::Api
+    Properties:
+      Description: HTTP API for expenses
+      Name: expenses-api
+      ProtocolType: HTTP
+      Target: !GetAtt ExpenseLambdaFunction.Arn
+  ExpenseLambdaFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      Runtime: nodejs18.x
+      Role: !GetAtt ExpenseFunctionExecutionRole.Arn
+      Handler: index.handler
+      Code:
+        ZipFile: |
+          const AWS = require("aws-sdk");
+
+          const dynamo = new AWS.DynamoDB.DocumentClient();
+
+          exports.handler = async (event, context) => {
+            let body;
+            let statusCode = 200;
+            const headers = {
+              "Content-Type": "application/json"
+            };
+            console.log(JSON.stringify(event));
+
+            try {
+              switch (event.routeKey) {
+                case "DELETE /Expenses/{id}":
+                  await dynamo
+                    .delete({
+                      TableName: "all-expenses",
+                      Key: {
+                        expenseId: event.pathParameters.id
+                      }
+                    })
+                    .promise();
+                  body = `Deleted Expense ${event.pathParameters.id}`;
+                  break;
+                case "GET /Expenses/{id}":
+                  body = await dynamo
+                    .get({
+                      TableName: "all-expenses",
+                      Key: {
+                        expenseId: event.pathParameters.id
+                      }
+                    })
+                    .promise();
+                  break;
+                case "GET /Expenses":
+                  body = await dynamo.scan({ TableName: "all-expenses" }).promise();
+                  break;
+                case "PUT /Expenses":
+                  let requestJSON = JSON.parse(event.body);
+                  await dynamo
+                    .put({
+                      TableName: "all-expenses",
+                      Expense: {
+                        expenseId: requestJSON.expenseId,
+                        price: requestJSON.price,
+                        description: requestJSON.description
+                      }
+                    })
+                    .promise();
+                  body = `Put Expense ${requestJSON.expenseId}`;
+                  break;
+                case "OPTIONS /Expenses":
+                  break;
+                case "OPTIONS /Expenses/{id}":
+                  break;
+                default:
+                  throw new Error(`Unsupported route: "${event.routeKey}"`);
+              }
+            } catch (err) {
+              statusCode = 400;
+              body = err.message;
+            } finally {
+              body = JSON.stringify(body);
+            }
+
+            return {
+              statusCode,
+              body,
+              headers
+            };
+          };
+  APIInvokeLambdaPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !Ref ExpenseLambdaFunction
+      Action: lambda:InvokeFunction
+      Principal: apigateway.amazonaws.com
+      SourceArn: !Sub arn:${AWS::Partition}:execute-api:${AWS::Region}:${AWS::AccountId}:${ExpenseAPI}/$default/$default
+  ExpenseFunctionExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      Policies:
+        - PolicyName: LambdaPolicy
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Action:
+                  - 'logs:CreateLogGroup'
+                  - 'logs:CreateLogStream'
+                  - 'logs:PutLogEvents'
+                Resource:
+                  - 'arn:aws:logs:*:*:*'
+                Effect: Allow
+              - Action:
+                  - 'dynamodb:PutExpense'
+                  - 'dynamodb:GetExpense'
+                  - 'dynamodb:DeleteExpense'
+                  - 'dynamodb:Scan'
+                Resource: !GetAtt ExpenseDynamoDBTable.Arn
+                Effect: Allow
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+              - lambda.amazonaws.com
+            Action:
+              - 'sts:AssumeRole'
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+
+Outputs:
+  InvokeURL:
+    Value: !Sub https://${ExpenseAPI}.execute-api.${AWS::Region}.amazonaws.com
