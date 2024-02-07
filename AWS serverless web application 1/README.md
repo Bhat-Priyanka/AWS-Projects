@@ -25,7 +25,7 @@ The goal of this project is to create a web application that enables users to re
   
 ### Architecture diagram:
 
-<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/Arch3.png" width="800">
+<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/Arch3.png" width="800">
 
 ### The main steps involved are as below:
 
@@ -54,12 +54,12 @@ The goal of this project is to create a web application that enables users to re
          *	Click on ‘Add permission’ -> ‘Attach policies directly’.
          *	Search for ‘AWSCodeCommitPowerUser’ and select it and click on ‘Next’ -> ‘Add permission’.
 
-          	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/AddPermission.png" width="800">
+          	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/AddPermission.png" width="800">
    
    3.	Create Git credentials for IAM user to allow HTTP requests to CodeCommit:
          *	Go to your IAM user account -> ‘Security Credentials’ -> ‘HTTP Git Credentials for AWS Code Commit’ -> ‘Generate credentials’. Copy the details or download them.
 
-          	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/GitCredentials.png" width="800">
+          	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/GitCredentials.png" width="800">
    
    4.	Clone the repository:
          *	Go back to CodeCommit -> Wildrydes-site2 -> ‘Clone URL’ -> ‘Clone HTTP’.
@@ -90,26 +90,26 @@ The goal of this project is to create a web application that enables users to re
 #### 2.	Static website hosting:
    1.	Go to AWS Console -> AWS Amplify -> ‘Get Started’ -> ‘Host your web app’.
 
-     	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/HostWebApp.png" width="800">
+     	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/HostWebApp.png" width="800">
    
    2.	Select ‘AWS CodeCommit’. Select the repository ‘wildrydes-site2’ and keep the default settings.
    3.	In ‘Build Settings’ -> ‘Environment’ -> select ‘Create new environment’ and name is as ‘prod’ and click on ‘Create new role’.
 
-     	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/BuildSettings.png" width="800">
+     	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/BuildSettings.png" width="800">
    
    4.	Unser ‘Select trusted entity’, make sure that AWS Service is selected and under ‘Use case’, select AWS Amplify’ and click ‘Next’, keep the default settings and click on ‘Next’.
    5.	In Review page, name the role ‘ and click on ‘Create role’.
    6.	In Roles tab, search for ‘wildrydes-backend-role and click on it.
    7.	Click on ‘Add permission’ -> ‘Attach policies’ -> search for ‘AwsCodeCommitReadOnly’ and select it and click ‘Add permissions’.
 
-     	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/AttachPolicy.png" width="800">
+     	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/AttachPolicy.png" width="800">
    
    8. Go back to ‘Review’ page, click on ‘Save and deploy’.
    9. Wait for a few mins to finish building and deploying and you can click on the URL generated to launch the web page.
 
-      <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/BuildDone.png" width="800">
+      <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/BuildDone.png" width="800">
        
-       <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/LaunchPage.png" width="800">
+       <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/LaunchPage.png" width="800">
 
 #### 3. User registration and authentication using AWS Cognito:
    1.	Go to AWS Console -> Cloud9 -> ‘Create environment’.
@@ -125,14 +125,14 @@ The goal of this project is to create a web application that enables users to re
             <br /> <code>	Amplify init </code>
          6.	Make sure to add ‘prod’ as name for environment.
 
-           	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/amplify.png" width="800">
+           	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/amplify.png" width="800">
          
          7.	Verify Amplify is installed by entering the command:
              <br /> <code> Amplify version </code>
    5.	 To add Cognito user pool, enter the following command:
          <br /> <code>	Amplify add auth </code>
 
-     	 <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/addAuth.png" width="800">
+     	 <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/addAuth.png" width="800">
    
    6.	Commit code changes and start a new build in Amplify by entering the commands:
         <br /> <code> git add . </code>
@@ -140,7 +140,7 @@ The goal of this project is to create a web application that enables users to re
         <br /> <code> git push </code>
    7.	Once the build is done, go to AWS console -> AWS Cognito -> check that user pool is created and an app client is created.
 
-     	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/UserPool.png" width="800">
+     	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/UserPool.png" width="800">
    
    8.	Testing user registration and authentication:
          1.	Go the browser and refresh the web page and click on ‘Giddy up!’. 
@@ -151,12 +151,12 @@ The goal of this project is to create a web application that enables users to re
          1.	Go To DynamoDB and click on ‘Create table’.
          2.	Name it as ‘Rides’ and enter ‘RideId’ for ‘Partition key’ and create the table.
 
-           	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/Table.png" width="800">
+           	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/Table.png" width="800">
    
    2.	Create an IAM role for Lambda function:
          1.	Go to IAM Console -> Roles -> ‘Create role’. Select ‘Lambda’ as use case.
 
-           	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/LambdaRole.png" width="800">
+           	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/LambdaRole.png" width="800">
          
          2.	Click next and select AWSLambdaBasicExecutionRole and check the box and click ‘Next’.
          3.	Name the role as ‘WildRydesLambda’ and create the role.
@@ -166,7 +166,7 @@ The goal of this project is to create a web application that enables users to re
          7.	Go to the DynamoDB table table in new tab -> Overview -> General Information’ -> ‘Additional info’ and copy the ARN link.
          8.	Paste the link in ‘Resource ARN’ field and click on ‘Add ARN’.
 
-           	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/ARN.png" width="800">
+           	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/ARN.png" width="800">
          
          9. In ‘Review’ page, enter ‘DynamoDBWriteAccess’ as policy name and choose ‘Create policy’.
    
@@ -175,7 +175,7 @@ The goal of this project is to create a web application that enables users to re
          2.	Select Nodejs.18x for the Runtime.
          3.	Expand ‘Change default execution role’ -> ‘Use an existing role’ and select ‘WildRydesLambda’ role and create function.
 
-           	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/LambdaFuc.png" width="800">
+           	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/LambdaFuc.png" width="800">
          
          4.	In ‘Function code’ section, copy and paste the code from <a href="https://webapp.serverlessworkshops.io/3-serverlessbackend/4-lambda/requestUnicorn.js" target="_blank">Link</a> and click on ‘Deploy’.
    
@@ -213,11 +213,11 @@ The goal of this project is to create a web application that enables users to re
          3.	Create a new resource and method:
                1.	Go to the API -> ‘Resources’ -> ‘Create Resource’ -> name it as ‘ride’ and select CORS.
      
-            <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/Resource.png" width="800">
+            <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/Resource.png" width="800">
                
                2.	Click on ‘Create method’ -> Select ‘POST’ as ‘Method type’, select ‘Lambda function’ as integration type and select ‘RequestUnicorn’ function in ‘Lambda function’ field and create method.
 
-         <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/Method.png" width="800">
+         <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/Method.png" width="800">
          
          4.	Go to ‘Method Request’ tab -> Edit -> Add ‘wildRydes’ as authorization method and click on save.
          5.	Click on ‘Deploy API’ -> ‘Stage’ -> ‘New Stage’ -> name it as ‘prod’ and click on ‘Deploy’.
@@ -231,7 +231,7 @@ The goal of this project is to create a web application that enables users to re
 #### Testing the application:
 Go to the web page, click anywhere on the map, and click on ‘Request unicorn’. You will see a unicorn is on its way.  You can verify that new items have been added to the DynamoDB table.
 
-<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/Result.png" width="800">
+<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%201/Images/Result.png" width="800">
 
 ### Conclusion:
 
