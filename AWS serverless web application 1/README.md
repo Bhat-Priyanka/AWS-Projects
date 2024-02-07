@@ -177,7 +177,7 @@ The goal of this project is to create a web application that enables users to re
 
            	<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/LambdaFuc.png" width="800">
          
-         4.	In ‘Function code’ section, copy and paste the code from https://webapp.serverlessworkshops.io/3-serverlessbackend/4-lambda/requestUnicorn.js and click on ‘Deploy’.
+         4.	In ‘Function code’ section, copy and paste the code from <a href="https://webapp.serverlessworkshops.io/3-serverlessbackend/4-lambda/requestUnicorn.js" target="_blank">Link</a> and click on ‘Deploy’.
    
    4.	Test the lambda function:
          1.	Go to Test tab, enter ‘TestRequirementEvent’ in event name field and enter the following code and save and click ‘Test’.
