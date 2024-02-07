@@ -229,9 +229,9 @@ The goal of this project is to create a web application that enables users to re
                <br /> <code>git push </code>
 
 #### Testing the application:
-      Go to the web page, click anywhere on the map, and click on ‘Request unicorn’. You will see a unicorn is on its way.  You can verify that new items have been added to the DynamoDB table.
+Go to the web page, click anywhere on the map, and click on ‘Request unicorn’. You will see a unicorn is on its way.  You can verify that new items have been added to the DynamoDB table.
 
-      <img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/Result.png" width="800">
+<img src="https://github.com/Bhat-Priyanka/AWS-Projects/blob/main/AWS%20serverless%20web%20application%203/Images/Result.png" width="800">
 
 ### Conclusion:
 
